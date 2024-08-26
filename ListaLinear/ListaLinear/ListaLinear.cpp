@@ -97,7 +97,7 @@ void inserirElemento()
 		nElementos++;
 	}
 	else {
-		cout << "Lista cheia";
+		cout << "Lista cheia \n";
 	}
 
 }
@@ -105,5 +105,24 @@ void inserirElemento()
 // deve ser implementada como resposta ao exercicio
 void buscarElemento()
 {
-
+	int bsc, vezes = 0;
+	cout << "Digite o valor que voce dezeja encontrar na lista: \n";
+	cin >> bsc;
+	for (int n = 0; n < nElementos; n++) {
+		cout << lista[n];
+		if (lista[n] == bsc) {
+			cout << " <- Item buscado ta aqui oh" << endl;
+			vezes++;
+		}
+		else {
+			cout << endl;
+		}
+	}
+	if (vezes != 0) {
+		cout << "Valor buscado aparece " << vezes << " vezes!" << endl;
+	}
+	else
+	{
+		cout << "O valor nao foi encontrado na lista" << endl;
+	}
 }
